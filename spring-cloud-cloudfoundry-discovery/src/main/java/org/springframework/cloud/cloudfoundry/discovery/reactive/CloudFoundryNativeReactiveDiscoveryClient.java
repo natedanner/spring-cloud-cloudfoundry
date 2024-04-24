@@ -81,7 +81,7 @@ public class CloudFoundryNativeReactiveDiscoveryClient implements ReactiveDiscov
 		String applicationIndex = instanceDetail.getIndex();
 		String instanceId = applicationId + "." + applicationIndex;
 		String name = applicationDetail.getName();
-		String url = applicationDetail.getUrls().size() > 0 ? applicationDetail.getUrls().get(0) : null;
+		String url = applicationDetail.getUrls().isEmpty() ? null : applicationDetail.getUrls().get(0);
 		boolean secure = (url + "").toLowerCase().startsWith("https");
 
 		HashMap<String, String> metadata = new HashMap<>();

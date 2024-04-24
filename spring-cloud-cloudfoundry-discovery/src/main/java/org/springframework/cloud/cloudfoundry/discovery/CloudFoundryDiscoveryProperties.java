@@ -45,7 +45,7 @@ public class CloudFoundryDiscoveryProperties {
 	 * Order of the discovery client used by `CompositeDiscoveryClient` for sorting
 	 * available clients.
 	 */
-	private int order = 0;
+	private int order;
 
 	/**
 	 * Default internal domain when configured to use Native DNS service discovery.

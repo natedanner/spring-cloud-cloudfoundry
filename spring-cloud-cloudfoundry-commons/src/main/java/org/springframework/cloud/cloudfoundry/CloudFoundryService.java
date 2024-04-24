@@ -41,7 +41,7 @@ public class CloudFoundryService {
 		GetApplicationRequest applicationRequest = GetApplicationRequest.builder().name(serviceId).build();
 		return this.cloudFoundryOperations.applications().get(applicationRequest).flatMapMany(applicationDetail -> {
 			Flux<InstanceDetail> ids = Flux.fromStream(applicationDetail.getInstanceDetails().stream())
-					.filter(id -> id.getState().equalsIgnoreCase("RUNNING"));
+					.filter(id -> "RUNNING".equalsIgnoreCase(id.getState()));
 			Flux<ApplicationDetail> generate = Flux.generate(sink -> sink.next(applicationDetail));
 			return generate.zipWith(ids);
 		});

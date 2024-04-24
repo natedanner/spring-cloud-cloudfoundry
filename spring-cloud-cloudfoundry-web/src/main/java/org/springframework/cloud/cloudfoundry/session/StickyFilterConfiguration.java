@@ -45,7 +45,7 @@ public class StickyFilterConfiguration {
 
 	@Bean
 	public FilterRegistrationBean<?> stickyCloudFoundryFilter() {
-		FilterRegistrationBean<Filter> filter = new FilterRegistrationBean<Filter>();
+		FilterRegistrationBean<Filter> filter = new FilterRegistrationBean<>();
 		filter.setOrder(Ordered.LOWEST_PRECEDENCE);
 		filter.setFilter(new OncePerRequestFilter() {
 			@Override

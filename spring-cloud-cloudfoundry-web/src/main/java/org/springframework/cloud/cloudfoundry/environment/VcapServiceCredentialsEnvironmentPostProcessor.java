@@ -42,7 +42,7 @@ public class VcapServiceCredentialsEnvironmentPostProcessor implements Environme
 	// After VcapEnvironmentPostProcessor and ConfigFileEnvironmentPostProcessor so
 	// values here can
 	// use those ones
-	private int order = ConfigFileApplicationListener.DEFAULT_ORDER + 1;
+	private final int order = ConfigFileApplicationListener.DEFAULT_ORDER + 1;
 
 	@Override
 	public int getOrder() {

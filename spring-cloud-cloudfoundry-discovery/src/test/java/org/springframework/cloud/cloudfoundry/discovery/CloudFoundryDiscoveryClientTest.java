@@ -48,7 +48,7 @@ public class CloudFoundryDiscoveryClientTest {
 
 	private CloudFoundryDiscoveryClient cloudFoundryDiscoveryClient;
 
-	private String hiServiceServiceId = "hi-service";
+	private final String hiServiceServiceId = "hi-service";
 
 	private CloudFoundryOperations ops;
 

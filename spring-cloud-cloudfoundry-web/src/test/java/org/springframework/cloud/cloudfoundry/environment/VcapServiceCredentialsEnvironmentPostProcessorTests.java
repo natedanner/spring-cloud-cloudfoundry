@@ -36,9 +36,9 @@ import static org.springframework.cloud.cloudfoundry.environment.VcapServiceCred
  */
 public class VcapServiceCredentialsEnvironmentPostProcessorTests {
 
-	private VcapServiceCredentialsEnvironmentPostProcessor listener = new VcapServiceCredentialsEnvironmentPostProcessor();
+	private final VcapServiceCredentialsEnvironmentPostProcessor listener = new VcapServiceCredentialsEnvironmentPostProcessor();
 
-	private ConfigurableEnvironment environment = new StandardEnvironment();
+	private final ConfigurableEnvironment environment = new StandardEnvironment();
 
 	@Test
 	public void noop() {
